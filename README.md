@@ -31,4 +31,19 @@ Criando projeto do scrapy
 Criar spider do site
 '''scrapy genspider mercadolivre https://lista.mercadolivre.com.br/celular'''
 
+Iniciar terminal do scrapy
+'''scrapy shell'''
+
+Entrando na pagina
+'''fetch('https://lista.mercadolivre.com.br/celular')'''
+
+Configurar settings.py para acessar a pagina 
+'''USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' '''
+
+Encontrar os blocos padrões
+
+'''reposnse.css('atributo.nome_da_classe')'''
+
+
+
 
