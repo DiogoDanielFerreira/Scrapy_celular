@@ -18,3 +18,17 @@ Inicializar comandos do git
 '''git branch -M main'''
 '''git remote add origin https://github.com/DiogoDanielFerreira/Scrapy_celular.git'''
 '''git push -u origin main'''
+
+Fazer web Scraping no site do mercadolivre
+'''https://lista.mercadolivre.com.br/celular'''
+
+instalar bibliotecas do scrapy
+'''pip install scrapy'''
+
+Criando projeto do scrapy
+'''scrapy startproject src'''
+
+Criar spider do site
+'''scrapy genspider mercadolivre https://lista.mercadolivre.com.br/celular'''
+
+
