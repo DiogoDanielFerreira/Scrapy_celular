@@ -1,6 +1,6 @@
 # Scrapy_celular
 
-# Passo a Passo Projeto
+## Passo a Passo Projeto
 
 Criar ambiente virtual
 '''pytohn -m venv .venv'''
