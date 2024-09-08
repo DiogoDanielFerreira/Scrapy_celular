@@ -49,6 +49,11 @@ Comando do scrapy para salvar crawlear e salvar arquivo
 
 Para conseguir crawlear as 10 paginas precisa mudar: ROBOTSTXT_OBEY = False
 
+Para criar banco de dados entre na pasta src e rode o comando
+'''python transformacao/main.py'''
+
+Para visualizar o dash entre na pasta src e rode o comando 
+'''streamlit run dashboard/app.py''' 
 
 
 
