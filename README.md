@@ -47,6 +47,8 @@ Encontrar os blocos padrões
 Comando do scrapy para salvar crawlear e salvar arquivo
 '''scrapy crawl mercadolivre -o data/data.json'''
 
+Para conseguir crawlear as 10 paginas precisa mudar: ROBOTSTXT_OBEY = False
+
 
 
 
