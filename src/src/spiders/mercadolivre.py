@@ -4,8 +4,8 @@ import scrapy
 class MercadolivreSpider(scrapy.Spider):
     name = "mercadolivre"
     start_urls = ["https://lista.mercadolivre.com.br/celular"]
-  #  page_count = 1
-  #  max_pages = 10
+    page_count = 1
+    max_pages = 10
 
     def parse(self, response):
 
@@ -29,9 +29,9 @@ class MercadolivreSpider(scrapy.Spider):
 
             }
 
-#        if self.page_count < self.max_pages:
- #           next_page = response.css(
-  #              'li.andes-pagination__button.andes-pagination__button--next a::attr(href)').get()
-   #         if next_page:
-    #            self.page_count += 1
-     #           yield scrapy.Request(url=next_page, callback=self.parse)
+        if self.page_count < self.max_pages:
+            next_page = response.css(
+                'li.andes-pagination__button.andes-pagination__button--next a::attr(href)').get()
+            if next_page:
+                self.page_count += 1
+                yield scrapy.Request(url=next_page, callback=self.parse)
