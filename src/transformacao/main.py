@@ -21,9 +21,13 @@ df['new_price_cents'] = df['new_price_cents'].fillna(0).astype(float)
 df['old_price'] = df['old_price_reais'] + df['old_price_cents'] / 100
 df['new_price'] = df['new_price_reais'] + df['new_price_cents'] / 100
 
+# Separando nome das marcas
+df[['lixo', 'marca', 'espaco']] = df['brand'].str.split(expand=True)
+
 # Remover as colunas antigas de preços
 df = df.drop(columns=['old_price_reais', 'old_price_cents',
-             'new_price_reais', 'new_price_cents'], axis=1)
+             'new_price_reais', 'new_price_cents', 'lixo', 'espaco', 'brand'], axis=1)
+
 
 # Conectar ao banco de dados SQLite (ou criar um novo)
 conn = sqlite3.connect('../data/quotes.db')

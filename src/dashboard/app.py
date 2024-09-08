@@ -11,13 +11,18 @@ df = pd.read_sql_query("SELECT * FROM mercadolivre_celulares", conn)
 # Fechar a conexão com o banco de dados
 conn.close()
 
+# configurar em pagina toda
+st.set_page_config(layout="wide")
+
 # Título da aplicação
 st.title('Pesquisa de Mercado - Celulares no Mercado Livre')
 
+df
 # Melhorar o layout com colunas para KPIs
 st.subheader('KPIs principais do sistema')
 col1, col2, col3 = st.columns(3)
 
+'''
 # KPI 1: Número total de itens
 total_itens = df.shape[0]
 col1.metric(label="Número Total de Itens", value=total_itens)
@@ -47,11 +52,4 @@ average_price_by_brand = df_non_zero_prices.groupby(
 col1.bar_chart(average_price_by_brand)
 col2.write(average_price_by_brand)
 
-# Qual a satisfação por marca
-st.subheader('Satisfação por marca')
-col1, col2 = st.columns([4, 2])
-df_non_zero_reviews = df[df['reviews_rating_number'] > 0]
-satisfaction_by_brand = df_non_zero_reviews.groupby(
-    'brand')['reviews_rating_number'].mean().sort_values(ascending=False)
-col1.bar_chart(satisfaction_by_brand)
-col2.write(satisfaction_by_brand)
+'''
