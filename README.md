@@ -44,6 +44,10 @@ Encontrar os blocos padrões
 
 '''reposnse.css('atributo.nome_da_classe')'''
 
+Comando do scrapy para salvar crawlear e salvar arquivo
+'''scrapy crawl mercadolivre -o data/data.json'''
+
+
 
 
 
