@@ -3,12 +3,12 @@
 ## Passo a Passo Projeto
 
 Criar ambiente virtual
-''' bash
+'''bash
 pytohn -m venv .venv
 '''
 
 Ativar ambiente virtual
-''' bash
+'''bash
 source .venv/Scripts/activate
 '''
 
